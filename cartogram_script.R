@@ -2,6 +2,8 @@
 
 ##Partial source: https://www.r-graph-gallery.com/331-basic-cartogram.html
 
+install.packages('cartogram')
+
 library(cartogram)
 library(maptools)
 library(tidyverse)
@@ -9,7 +11,7 @@ library(broom)
 library(rgeos)
 library(sf)
 
-sf_data <- st_read("SF_data_new.shp")
+sf_data <- st_read("~/272A_Week7_Toolkit/SF_data_new.shp")
 
 ggplot() +
   geom_sf(data = sf_data, color = "black", size = 0.5, fill = "white") +
